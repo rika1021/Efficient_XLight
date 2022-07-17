@@ -21,26 +21,32 @@ def parse_args():
 
 
 def main(in_args=None):
-    if in_args.hangzhou:
-        count = 3600
-        road_net = "4_4"
-        traffic_file_list = ["anon_4_4_hangzhou_real.json",
-                             "anon_4_4_hangzhou_real_5816.json"]
-        num_rounds = 80
-        template = "Hangzhou"
-    elif in_args.jinan:
-        count = 3600
-        road_net = "3_4"
-        traffic_file_list = ["anon_3_4_jinan_real.json", "anon_3_4_jinan_real_2000.json",
-                             "anon_3_4_jinan_real_2500.json"]
-        num_rounds = 80
-        template = "Jinan"
-    elif in_args.newyork:
-        count = 3600
-        road_net = "28_7"
-        traffic_file_list = ["anon_28_7_newyork_real_double.json", "anon_28_7_newyork_real_triple.json"]
-        num_rounds = 80
-        template = "newyork_28_7"
+    count = 3600
+    road_net = "4_4"
+    traffic_file_list = ["anon_4_4_hangzhou_real.json",
+                         "anon_4_4_hangzhou_real_5816.json"]
+
+
+    # if in_args.hangzhou:
+    #     count = 3600
+    #     road_net = "4_4"
+    #     traffic_file_list = ["anon_4_4_hangzhou_real.json",
+    #                          "anon_4_4_hangzhou_real_5816.json"]
+    #     num_rounds = 80
+    #     template = "Hangzhou"
+    # elif in_args.jinan:
+    #     count = 3600
+    #     road_net = "3_4"
+    #     traffic_file_list = ["anon_3_4_jinan_real.json", "anon_3_4_jinan_real_2000.json",
+    #                          "anon_3_4_jinan_real_2500.json"]
+    #     num_rounds = 80
+    #     template = "Jinan"
+    # elif in_args.newyork:
+    #     count = 3600
+    #     road_net = "28_7"
+    #     traffic_file_list = ["anon_28_7_newyork_real_double.json", "anon_28_7_newyork_real_triple.json"]
+    #     num_rounds = 80
+    #     template = "newyork_28_7"
     NUM_COL = int(road_net.split('_')[1])
     NUM_ROW = int(road_net.split('_')[0])
     num_intersections = NUM_ROW * NUM_COL
